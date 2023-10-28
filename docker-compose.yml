@@ -1,0 +1,10 @@
+services:
+  chatgpt:
+    image: sheepgreen/bard-web
+    container_name: bardchat
+    environment:
+      - BARD__Secure_1PSID=aMam3b1KYPos4xVW33ChIf_qZgOQwyHh-nwubf6j8_kZUP8ncBAGecTqJpZ046CuDQ
+      - BARD__Secure_1PSIDTS=CjEBNiGH7hgStLZ8yXi1yUD6LBiUFKwry__3LxQkc09SSEkYLgRBiv25_B42TTyxWscOEAA
+    ports:
+      - "9898:8088" #8088为容器内端口，不可更换；9898为外部端口，可自行更换
+    restart: always
